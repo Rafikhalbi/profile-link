@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #bebbbb;
+}
+
+.container {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30vh;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container ul li {
+    padding: 10px;
+    list-style: none;
+}
+
+.container input {
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(46, 152, 240);
+    padding: 10px;
+}
+
+.container input:hover {
+    border-bottom: 2px solid rgb(17, 103, 173);
+}
+
+.container button {
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(145, 100, 187);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.container button:hover {
+    background-color: rgb(100, 56, 141);
+}
+
+.err {
+    color: red;
+    text-align: center;
+}
+
+.succ {
+    color: green;
+    text-align: center;
+}

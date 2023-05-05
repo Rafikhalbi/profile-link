@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #c5c2c2ea;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 95%;
+    height: auto;
+    background-color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.cover img {
+    width: 95%;
+    height: 350px;
+    pointer-events: none;
+    border: 3px solid #eaeaea;
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #eaeaea;
+    position: relative;
+    top: -100px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -90px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
+}
+
+.bio p {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    background-color: #ffffff;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+}
+
+.content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #bbbaba;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.link-gh {
+    margin-bottom: 30px;
+}
+
+.content span {
+    font-weight: 600;
+    color: #333;
+}
+
+.content div:hover {
+    background-color: black;
+}
+
+.bluebadge {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    vertical-align: -3px;
+    display: inline-block;
+    background: url("../bluebadge.svg");
+    background-repeat: no-repeat;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.copy {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #838181;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.copy input {
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    outline: none;
+    color: #ffffff;
+    background-color: #333;
+}
+
+.copy button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+    background-color: #333;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.copy button:hover {
+    background-color: green;
+}
+
+@media screen and (max-width: 768px) {
+    .cover img {
+        height: 200px;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+        top: -80px;
+    }
+
+    .name {
+        top: -70px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cover img {
+        height: 150px;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+        top: -60px;
+    }
+
+    .name {
+        top: -50px;
+    }
+}
