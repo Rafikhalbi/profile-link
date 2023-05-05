@@ -1,10 +1,12 @@
 <?php
 
-function url(){
-    return sprintf(
-      "%s://%s%s",
-      isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-      $_SERVER['SERVER_NAME'],
-      $_SERVER['REQUEST_URI']
-    );
-}
+/*****
+ * 
+ * 
+ * @Database Configuration
+ */
+
+define("DB_NAME","profile");
+define("DB_HOST","127.0.0.1");
+define("DB_USER","root");
+define("DB_PASS","root");
