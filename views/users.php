@@ -1,11 +1,12 @@
 <?php
-
+var_dump(__DIR__."path views");
 require '../src/functions.php';
 
 $username = $_GET['username'];
 
 if (!$username) {
     header('Location: ../index.php');
+    exit;
 }
 
 $query = mysqli_query($conn, "SELECT * FROM `users` WHERE `username` = '$username'");
@@ -14,6 +15,7 @@ $data = mysqli_fetch_assoc($query);
 
 if (!$data) {
     header('Location: ../index.php');
+    exit;
 }
 
 ?>

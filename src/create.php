@@ -1,11 +1,7 @@
 <?php
 require 'functions.php';
-
-if (isset($_POST['create'])) {
-    $link = createData($_POST);
-    header('Location: ../views/users.php?username=' . $link);
-}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +27,20 @@ if (isset($_POST['create'])) {
         </div>
         <form action="" method="post" enctype="multipart/form-data" accept="image/*">
         <div class="form-container">
+        <?php
+            if (isset($_POST['create'])) {
+                $link = createData($_POST);
+                // var_dump($link);
+                if(!$link['status']){
+                echo "<div>Gagal membuat akun</div>";
+                }else{
+                    header('Location: ../views/users.php?username=' . $link['user']);
+                    exit;
+                }
+               
+            }
+        ?>
+           
             <ul class="doubel-input">
                 <li class="form-input">
                     <input class="form-input-text" type="text" name="name" placeholder="your name.." autofocus="" autocomplete="off" required="">

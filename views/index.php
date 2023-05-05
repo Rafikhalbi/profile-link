@@ -1,5 +1,4 @@
 <?php
-
-header("Location: users.php");
-
+header("Location: /views/users.php");
+exit;
 ?>

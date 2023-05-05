@@ -1,7 +1,12 @@
 <?php
-require('./config/config.php');
-$conn = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
-
+// var_dump(__DIR__."path src");
+define("DB_HOST","127.0.0.1");
+define("DB_USER","root");
+define("DB_PASS","root");
+define("DB_NAME","profile");
+$conn = mysqli_connect(DB_HOST,DB_USER,DB_PASS) or die('koneksi gagal');
+mysqli_select_db($conn,DB_NAME) or die('database salah');
+// var_dump($conn);
 function createData($data) {
     global $conn;
     $name = htmlspecialchars($data['name']);
@@ -19,16 +24,15 @@ function createData($data) {
         return 0;
     }
 
-    $data = "INSERT INTO users VALUES ('', '$name', '$email', '$profile', '$cover', '$facebook', '$instagram', '$twitter', '$github', '$username', '$bio', 0)";
+    $data = "INSERT INTO users (name,email,pp,ps,facebook,instagram,twitter,github,username,bio,bluebadge) VALUES ('$name', '$email', '$profile', '$cover', '$facebook', '$instagram', '$twitter', '$github', '$username', '$bio', 0)";
     
 
     mysqli_query($conn, $data);
 
     if (mysqli_affected_rows($conn) > 0) {
-        echo 'data berhasil di tambahkan';
-        return $username;
+        return ['user'=>$username,'status'=>true];
     } else {
-        echo 'data gagal di tambahkan';
+       return ['status'=>false];
     }
 
 }

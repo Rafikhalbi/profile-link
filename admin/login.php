@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION["login"])) {
-    header('Location: index.php');
+    header('Location: /admin/index.php');
     exit;
 }
 
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
     if ($username === $result["username"]) {
         if ($password === $result["password"]) {
             $_SESSION["login"] = true;
-            header('Location: index.php');
+            header('Location: /admin/index.php');
             exit;
         }
     }
