@@ -4,7 +4,7 @@ session_start();
 require '../src/functions.php';
 
 if (!isset($_SESSION["login"])) {
-    header('Location: login.php');
+    header('Location: /admin/login.php');
     exit;
 }
 
@@ -16,7 +16,7 @@ if (isset($_POST["bluebadge"])) {
     $result = mysqli_fetch_assoc($query);
 
     if (!$result) {
-        header("Location: index.php");
+        header("Location: /admin/index.php");
         exit;
     }
 
